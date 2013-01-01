@@ -36,3 +36,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# 使用 bootstrap-sass 支持 bootstrap 风格
+gem "bootstrap-sass", "~> 2.2.2.0"
