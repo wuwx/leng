@@ -12,3 +12,11 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  background: #f0f0f5;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+}
