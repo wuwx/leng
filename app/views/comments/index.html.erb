@@ -1,0 +1,10 @@
+<div class="comments">
+  <%= render @comments %>
+  
+  <%= form_for Comment.new, :url => comments_path(:topic_id => @topic), :remote => true do |f| %>
+  <%= f.text_area :content, :style => "height: 80px; width: 98%;" %>
+    <div class="clearfix">
+      <%= f.submit :class => "btn btn-primary pull-right" %>
+    </div>
+  <% end %>
+</div>
