@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all.reverse
+    @topics = Topic.page(params[:page]).reverse_order
 
     respond_to do |format|
       format.html # index.html.erb

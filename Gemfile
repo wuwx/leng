@@ -52,3 +52,6 @@ gem "simple_form", "~> 2.0.4"
 
 # 使用 bootstrap_helper 处理部分界面
 gem "bootstrap_helper", "~> 2.1.2.1"
+
+# 使用 will_paginate 进行分页
+gem "will_paginate", "~> 3.0.3"
