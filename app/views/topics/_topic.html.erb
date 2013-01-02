@@ -1,3 +1,8 @@
-<%= div_for topic do %>
-  <%= topic.content %>
+<%= div_for topic, :class => "row" do %>
+  <div class="span1">
+    
+  </div>
+  <div class="span11">
+    <%= topic.content %>
+  </div>
 <% end %>
