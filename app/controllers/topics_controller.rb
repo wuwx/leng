@@ -46,9 +46,11 @@ class TopicsController < ApplicationController
       if @topic.save
         format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
         format.json { render json: @topic, status: :created, location: @topic }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
