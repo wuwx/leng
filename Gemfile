@@ -48,3 +48,6 @@ gem "bootstrap-sass", "~> 2.2.2.0"
 
 # 使用 simple_form 简化 form
 gem "simple_form", "~> 2.0.4"
+
+# 使用 bootstrap_helper 处理部分界面
+gem "bootstrap_helper", "~> 2.1.2.1"
