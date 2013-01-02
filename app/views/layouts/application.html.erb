@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">冷！</a>
+        <%= render_list :class => "nav" do |li|
+          li << link_to("笑话", topics_path)
+        end %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
