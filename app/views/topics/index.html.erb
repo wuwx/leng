@@ -1,3 +1,10 @@
+<%= form_for Topic.new, :remote => true do |f| %>
+<%= f.text_area :content, :style => "height: 80px; width: 98%;" %>
+  <div class="clearfix">
+    <%= f.submit :class => "btn btn-primary pull-right" %>
+  </div>
+<% end %>
+
 <div class="topics">
   <%= render @topics %>
 </div>
