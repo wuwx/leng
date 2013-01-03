@@ -4,4 +4,5 @@
 
 $ ->
   $('.topic').click ->
+    $(this).unbind('click')
     $.get("/comments.js", { topic_id: $(this).attr('id').replace(/topic_/, '') })
