@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
   def create
     @topic = Topic.find(params[:topic_id])
     @comment = @topic.comments.build(params[:comment])
+    @comment.user = current_user
     
     respond_to do |format|
       if @comment.save
