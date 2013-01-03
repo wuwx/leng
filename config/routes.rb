@@ -1,6 +1,7 @@
 Leng::Application.routes.draw do
   
   root :to => 'topics#index'
+  resource :session
   resources :topics
   resources :users
   resources :comments
