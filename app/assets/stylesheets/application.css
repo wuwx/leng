@@ -20,3 +20,8 @@ body {
 .breadcrumb {
   margin-top: 20px;
 }
+
+.widget {
+  padding: 10px;
+  background: #FFF;
+}
