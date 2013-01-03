@@ -1,2 +1,1 @@
-$(".comments").remove()
-$("#<%= dom_id @topic %>").after("<%= escape_javascript(render(:file => 'comments/index.html.erb')) %>")
+$("#<%= dom_id @topic %> .comments").replaceWith("<%= escape_javascript(render(:file => 'comments/index.html.erb')) %>")

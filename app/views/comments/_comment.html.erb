@@ -1,9 +1,10 @@
 <%= div_for comment do %>
 <div class="row-fluid">
-  <div class="span2">
+  <div class="span1">
+    <%= image_tag comment.user.gravatar_url %>
   </div>
-  <div class="span10">
-    <div class="content"><%= comment.content %></div>
+  <div class="span11">
+    <div class="content"><%= comment.user.name %>: <%= comment.content %></div>
     <div class="created_at"><%= comment.created_at %></div>
   </div>
 </div>
