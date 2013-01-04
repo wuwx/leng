@@ -1,5 +1,4 @@
 class Flower < ActiveRecord::Base
-  # attr_accessible :title, :body
-  belongs_to :topic
-  belongs_to :user
+  belongs_to :topic, :counter_cache => true
+  belongs_to :user, :counter_cache => true
 end
