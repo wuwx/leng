@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
       t.integer :comments_count, :default => 0
       t.integer :flowers_count, :default => 0
+      t.integer :topics_count, :default => 0
       t.timestamps
     end
   end
