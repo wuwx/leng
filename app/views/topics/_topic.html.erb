@@ -8,7 +8,7 @@
     <div class="created_at">
       <%= topic.created_at %>
       <div class="pull-right">
-        <%= link_to "喜欢 #{topic.flowers.count}", flowers_path(:topic_id => topic), :method => :post, :remote => true %>
+        <%= link_to "喜欢 #{topic.flowers.size}", flowers_path(:topic_id => topic), :method => :post, :remote => true %>
       </div>
     </div>
     <div class="comments"></div>
