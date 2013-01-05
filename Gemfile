@@ -58,3 +58,6 @@ gem "will_paginate", "~> 3.0.3"
 
 # 用于显示用户的 Gravatar 头像的
 gem "gravtastic", "~> 3.2.6"
+
+# 还是用 Devise 来处理用户认证吧
+gem "devise", "~> 2.1.2"
