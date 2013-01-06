@@ -1,5 +1,4 @@
-<%= div_for comment do %>
-<div class="row-fluid">
+<%= div_for comment, :class => "row-fluid" do %>
   <div class="span1">
     <%= image_tag comment.user.gravatar_url %>
   </div>
@@ -7,5 +6,4 @@
     <div class="content"><%= comment.user.name %>: <%= comment.content %></div>
     <div class="created_at"><%= comment.created_at %></div>
   </div>
-</div>
 <% end %>
