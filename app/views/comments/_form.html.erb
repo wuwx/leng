@@ -1,0 +1,15 @@
+<div class="comment">
+  <div class="row-fluid">
+    <div class="span1">
+      <%= image_tag current_user.gravatar_url %>
+    </div>
+    <div class="span11">
+      <%= form_for Comment.new, :url => comments_path(:topic_id => @topic), :remote => true do |f| %>
+      <%= f.text_area :content, :style => "height: 50px; width: 98%;" %>
+        <div class="clearfix">
+          <%= f.submit :class => "btn btn-primary pull-right" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
