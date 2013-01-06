@@ -61,3 +61,6 @@ gem "will_paginate", "~> 3.0.3"
 
 # 用于显示用户的 Gravatar 头像的
 gem "gravtastic", "~> 3.2.6"
+
+# 使用 cancan 处理权限问题
+gem "cancan", "~> 1.6.8"
