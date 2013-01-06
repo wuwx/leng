@@ -4,7 +4,7 @@ class Session
   include ActiveModel::Validations
   extend ActiveModel::Naming
   
-  attr_accessor :email, :password
+  attr_accessor :email, :password, :remember_me
   attr_reader :user_id
   
   validates :email, :presence => true
@@ -25,4 +25,5 @@ class Session
       @user_id = user.id
     end
   end
+  
 end

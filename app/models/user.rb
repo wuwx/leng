@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :topics
   
-  validates :name, :presence => true
-  validates :email, :presence => true
+  validates :name, :presence => true, :uniqueness => true
+  validates :email, :presence => true, :uniqueness => true
   validates :password, :presence => true
   validates :password_confirmation, :presence => true
   

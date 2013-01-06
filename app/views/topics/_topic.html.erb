@@ -4,12 +4,16 @@
       <%= image_tag topic.user.gravatar_url %>
     </div>
     <div class="span11">
-      <div class="content"><%= topic.user.name %>: <%= topic.content %></div>
+      <div class="content"><%= topic.content %></div>
       <div class="created_at">
-        <%= topic.created_at %>
+        <%= topic.user.name %> <%= topic.created_at %>
         <div class="pull-right">
-          <%= link_to "评论#{topic.comments.size}", comments_path(:topic_id => topic), :remote => true %>
-          <%= link_to "喜欢#{topic.flowers.size}", flowers_path(:topic_id => topic), :method => :post, :remote => true %>
+          <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-info btn-small", :remote => true do %>
+            评论 <%= topic.comments.size %>
+          <% end %>
+          <%= link_to flowers_path(:topic_id => topic), :class => "flowers_count btn btn-info btn-small", :method => :post, :remote => true do %>
+            喜欢 <%= topic.flowers.size %>
+          <% end %>
         </div>
       </div>
       <div class="comments"></div>
