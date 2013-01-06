@@ -4,8 +4,8 @@
       <%= image_tag topic.user.gravatar_url %>
     </div>
     <div class="span11">
-      <div class="content"><%= topic.content %></div>
-      <div class="created_at">
+      <div class="content"><%= simple_format topic.content %></div>
+      <div class="created_at clearfix">
         <%= topic.user.name %> <%= topic.created_at %>
         <div class="pull-right">
           <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-info btn-small", :remote => true do %>
