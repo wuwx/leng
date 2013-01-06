@@ -8,7 +8,10 @@ gem 'rails', '3.2.9'
 group :development do
   gem 'sqlite3'
   gem "thin", "~> 1.5.0"
+  
+  # 优化错误显示界面效果
   gem "better_errors", "~> 0.3.2"
+  gem "binding_of_caller", "~> 0.6.5"
 end
 
 group :production do
