@@ -1,0 +1,7 @@
+<%= div_for user, :class => "row-fluid" do %>
+  <div class="span2"><%= image_tag user.gravatar_url %></div>
+  <div class="span10">
+    <div><%= user.name %></div>
+    <div><%= user.created_at %></div>
+  </div>
+<% end %>
