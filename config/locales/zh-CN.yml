@@ -6,9 +6,12 @@ zh-CN:
         password: 密码
   activerecord:
     models:
+      comment: 评论
+      topic: 笑话
       user: 用户
     attributes:
       user:
         name: 用户名
         email: 电子邮件
         password: 密码
+        password_confirmation: 确认密码
