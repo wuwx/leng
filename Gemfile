@@ -64,3 +64,6 @@ gem "gravtastic", "~> 3.2.6"
 
 # 使用 cancan 处理权限问题
 gem "cancan", "~> 1.6.8"
+
+# 使用 rails-i18n 实现国际化支持
+gem "rails-i18n", "~> 0.7.2"
