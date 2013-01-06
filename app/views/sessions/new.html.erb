@@ -1,11 +1,15 @@
 <div class="widget">
   <%= simple_form_for @session, :url => session_path, :html => {:class => "form-horizontal"} do |f| %>
+  
+    <legend>用户登陆</legend>
+    
     <%= f.input :email %>
     <%= f.input :password %>
-    <%= f.input :remember_me, :as => :boolean, :label => false, :inline_label => 'Yes, remember me' %>
+    <%= f.input :remember_me, :as => :boolean, :label => false, :inline_label => '记住我的登陆状态' %>
     
     <div class="form-actions">
       <%= f.submit :class => "btn btn-primary" %>
     </div>
+    
   <% end %>
 </div>

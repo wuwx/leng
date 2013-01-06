@@ -1,9 +1,14 @@
 <%= simple_form_for @user, :html => { :class => 'form-horizontal'} do |f| %>
+
+  <legend>用户注册</legend>
+
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
+  
   <div class="form-actions">
     <%= f.submit :class => "btn btn-primary" %>
   </div>
+  
 <% end %>
