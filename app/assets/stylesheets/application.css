@@ -29,3 +29,6 @@ body {
 .widget form {
   margin-bottom: 0;
 }
+.widget .form-actions {
+  margin-bottom: 0;
+}
