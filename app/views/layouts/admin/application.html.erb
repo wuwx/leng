@@ -1,0 +1,21 @@
+<% content_for :content do %>
+  <div class="row">
+    <div class="span2">
+      <%= render_list :class => "nav nav-tabs nav-stacked" do |li|
+        li << link_to("控制面板", admin_dashboard_path)
+        li << link_to("主题管理", admin_topics_path)
+        li << link_to("评论管理", admin_comments_path)
+        li << link_to("角色管理", admin_roles_path)
+        li << link_to("用户管理", admin_users_path)
+      end %>
+    </div>
+    <div class="span10">
+      <div class="widget">
+        <%= notice_message %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render :template => 'layouts/application' %>
