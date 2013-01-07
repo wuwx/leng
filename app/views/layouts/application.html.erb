@@ -30,17 +30,7 @@
   </div>
   <div class="container">
     <%= render_breadcrumb %>
-    <div class="row">
-      <div class="span8">
-        <%= notice_message %>
-        <%= yield %>
-      </div>
-      <div class="span4">
-        <div class="widget">
-          <%= render User.limit(10) %>
-        </div>
-      </div>
-    </div>
+    <%= content_for?(:content) ? yield(:content) : yield %>
   </div>
 </body>
 </html>
