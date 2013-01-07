@@ -1,2 +1,2 @@
-class Admin::RolesController < ApplicationController
+class Admin::RolesController < Admin::ApplicationController
 end

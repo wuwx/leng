@@ -1,2 +1,2 @@
-class Admin::TopicsController < ApplicationController
+class Admin::TopicsController < Admin::ApplicationController
 end
