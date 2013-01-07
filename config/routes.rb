@@ -6,6 +6,12 @@ Leng::Application.routes.draw do
   resources :users
   resources :comments
   resources :flowers
+  
+  namespace :admin do
+    root :to => 'dashboards#show'
+    resource :dashboard
+    resources :topics
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
