@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @topic = Topic.find(params[:topic_id])
-    @comments = @topic.comments
+    @comments = @topic.comments.includes(:user)
     
     respond_to do |format|
       format.html # index.html.erb

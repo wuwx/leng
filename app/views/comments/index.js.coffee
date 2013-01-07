@@ -1,2 +1,2 @@
 $("#<%= dom_id @topic %> .comments_count").addClass("disabled").attr('href', '#')
-$("#<%= dom_id @topic %> .comments").replaceWith("<%= escape_javascript(render(:file => 'comments/index.html.erb')) %>")
+$("#<%= dom_id @topic %> .comments").replaceWith("<%= escape_javascript(render :file => 'comments/index', :handlers => :erb) %>")
