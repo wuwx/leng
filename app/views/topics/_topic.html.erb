@@ -6,7 +6,7 @@
     <div class="span11">
       <div class="content"><%= simple_format topic.content %></div>
       <div class="created_at clearfix">
-        <%= topic.user.name %> <%= topic.created_at %>
+        <%= topic.user.name %> <%= time_ago_in_words topic.created_at %>
         <div class="pull-right">
           <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-info btn-small", :remote => true do %>
             评论 <%= topic.comments.size %>
