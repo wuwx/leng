@@ -13,6 +13,7 @@ Leng::Application.routes.draw do
     resources :topics
     resources :comments
     resources :users
+    resources :roles
   end
 
   # The priority is based upon order of creation:
