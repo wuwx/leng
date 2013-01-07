@@ -67,3 +67,6 @@ gem "cancan", "~> 1.6.8"
 
 # 使用 rails-i18n 实现国际化支持
 gem "rails-i18n", "~> 0.7.2"
+
+# 后台管理使用默认的脚手架就好
+gem "inherited_resources", "~> 1.3.1"
