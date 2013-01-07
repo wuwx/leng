@@ -11,6 +11,8 @@ Leng::Application.routes.draw do
     root :to => 'dashboards#show'
     resource :dashboard
     resources :topics
+    resources :comments
+    resources :users
   end
 
   # The priority is based upon order of creation:
