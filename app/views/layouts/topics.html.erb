@@ -1,0 +1,15 @@
+<% content_for :content do %>
+  <div class="row">
+    <div class="span8">
+      <%= notice_message %>
+      <%= yield %>
+    </div>
+    <div class="span4">
+      <div class="widget">
+        <%= render User.limit(10) %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render :template => 'layouts/application' %>
