@@ -45,7 +45,7 @@ class TopicsController < ApplicationController
   # POST /topics
   # POST /topics.json
   def create
-    @topic = Topic.new(params[:topic])
+    @topic = Topic.new(topic_params)
     @topic.user = current_user
 
     respond_to do |format|
@@ -67,7 +67,7 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
 
     respond_to do |format|
-      if @topic.update_attributes(params[:topic])
+      if @topic.update_attributes(topic_params)
         format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
         format.json { head :no_content }
       else
@@ -88,4 +88,9 @@ class TopicsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+    def topic_params
+      params.require(:topic).permit(:content)
+    end
 end
