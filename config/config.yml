@@ -1,0 +1,12 @@
+defaults: &defaults
+  app_name: "冷笑话"
+  domain: "http://localhost:3000"
+  
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
