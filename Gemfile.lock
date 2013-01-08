@@ -155,7 +155,6 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.10)
   rails-i18n (~> 0.7.2)
-  responders (~> 0.9.3)
   sass-rails (~> 3.2.3)
   simple_form (~> 2.0.4)
   sqlite3
