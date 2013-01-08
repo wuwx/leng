@@ -1,0 +1,9 @@
+<%= simple_form_for [:admin, @permission], :html => { :class => 'form-horizontal'} do |f| %>
+  <%= f.input :name %>
+  <%= f.input :resource %>
+  <%= f.input :action %>
+  <%= f.association :roles, :as => :check_boxes %>
+  <div class="form-actions">
+    <%= f.submit :class => "btn btn-primary" %>
+  </div>
+<% end %>
