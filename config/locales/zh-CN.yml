@@ -15,3 +15,11 @@ zh-CN:
         email: 电子邮件
         password: 密码
         password_confirmation: 确认密码
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name}已成功创建"
+      update:
+        notice: "%{resource_name}已成功更新"
+      destroy:
+        notice: "%{resource_name}已成功删除"
