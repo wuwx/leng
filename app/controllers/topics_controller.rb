@@ -1,4 +1,9 @@
 class TopicsController < ApplicationController
+  
+  before_filter do
+    @current << topics_path
+  end
+  
   # GET /topics
   # GET /topics.json
   def index

@@ -1,8 +1,10 @@
+# encoding: utf-8
 class Admin::PermissionsController < Admin::ApplicationController
   inherit_resources
   
   before_filter do
     @current << collection_path
+    drop_breadcrumb("权限管理", collection_path)
   end
   
   protected

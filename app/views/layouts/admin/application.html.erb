@@ -11,9 +11,10 @@
       end %>
     </div>
     <div class="span10">
+      <%= notice_message %>
+      
       <div class="widget">
-        <%= notice_message %>
-        <%= yield %>
+        <%= content_for?(:admin_content) ? yield(:admin_content) : yield %>
       </div>
     </div>
   </div>

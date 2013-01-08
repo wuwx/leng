@@ -1,8 +1,10 @@
+# encoding: utf-8
 class Admin::UsersController < Admin::ApplicationController
   inherit_resources
   
   before_filter do
     @current << collection_path
+    drop_breadcrumb("用户管理", collection_path)
   end
   
   protected

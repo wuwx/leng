@@ -22,12 +22,33 @@ body {
 }
 
 .widget {
-  padding: 10px;
+  border-radius: 6px;
   margin-bottom: 10px;
   background: #FFF;
 }
+.widget .widget-header {
+  padding: 10px;
+  border-bottom: 1px solid #DDD;
+}
+.widget .widget-content {
+  padding: 10px;
+}
+.widget .widget-footer {
+  padding: 10px;
+  border-top: 1px solid #DDD;
+}
+.widget h3 {
+  margin: 0;
+  line-height: 1.3em;
+}
 .widget form {
   margin-bottom: 0;
+}
+.widget .table {
+  margin: 0;
+}
+.widget .pagination {
+  margin: 0;
 }
 .widget .form-actions {
   margin-bottom: 0;

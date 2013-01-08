@@ -1,22 +1,24 @@
 <%= div_for topic, :class => "widget" do %>
-  <div class="row-fluid">
-    <div class="span1">
-      <%= image_tag topic.user.gravatar_url %>
-    </div>
-    <div class="span11">
-      <div class="content"><%= simple_format topic.content %></div>
-      <div class="created_at clearfix">
-        <%= topic.user.name %> <%= time_ago_in_words topic.created_at %>
-        <div class="pull-right">
-          <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-info btn-small", :remote => true do %>
-            评论 <%= topic.comments.size %>
-          <% end %>
-          <%= link_to flowers_path(:topic_id => topic), :class => "flowers_count btn btn-info btn-small", :method => :post, :remote => true do %>
-            喜欢 <%= topic.flowers.size %>
-          <% end %>
-        </div>
+  <div class="widget-content">
+    <div class="row-fluid">
+      <div class="span1">
+        <%= image_tag topic.user.gravatar_url %>
       </div>
-      <div class="comments"></div>
+      <div class="span11">
+        <div class="content"><%= simple_format topic.content %></div>
+        <div class="created_at clearfix">
+          <%= topic.user.name %> <%= time_ago_in_words topic.created_at %>
+          <div class="pull-right">
+            <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-info btn-small", :remote => true do %>
+              评论 <%= topic.comments.size %>
+            <% end %>
+            <%= link_to flowers_path(:topic_id => topic), :class => "flowers_count btn btn-info btn-small", :method => :post, :remote => true do %>
+              喜欢 <%= topic.flowers.size %>
+            <% end %>
+          </div>
+        </div>
+        <div class="comments"></div>
+      </div>
     </div>
   </div>
 <% end %>

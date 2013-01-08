@@ -1,10 +1,11 @@
-<h3>
-  权限管理
+<div class="widget-header">
   <div class="pull-right">
     <%= link_to "新建权限", [:new, :admin, :permission], :class => "btn btn-primary" %>
   </div>
-</h3>
-
-<table class="table">
-  <%= render @permissions %>
-</table>
+  <h3>权限管理</h3>
+</div>
+<div class="widget-content">
+  <table class="table">
+    <%= render @permissions %>
+  </table>
+</div>
