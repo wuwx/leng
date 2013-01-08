@@ -1,3 +1,7 @@
 <%= content_tag_for :tr, user do %>
-  <td><%= user.name %></td>
+  <td width="10%"><%= image_tag user.gravatar_url %></td>
+  <td>
+    <div><%= link_to user.name, [:edit, :admin, user] %></div>
+    <div><%= user.created_at %></div>
+  </td>
 <% end %>
