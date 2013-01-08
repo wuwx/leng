@@ -1,7 +1,8 @@
 <div class="widget">
+  <div class="widget-header">
+    <h3>用户登陆</h3>
+  </div>
   <%= simple_form_for @session, :url => session_path, :html => {:class => "form-horizontal"} do |f| %>
-  
-    <legend>用户登陆</legend>
     
     <%= f.input :email %>
     <%= f.input :password %>

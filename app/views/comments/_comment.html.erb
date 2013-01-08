@@ -1,8 +1,8 @@
-<%= div_for comment, :class => "row-fluid" do %>
-  <div class="span1">
-    <%= image_tag comment.user.gravatar_url %>
-  </div>
-  <div class="span11">
+<%= div_for comment, :class => "media" do %>
+  <a class="pull-left" href="#">
+    <%= image_tag comment.user.gravatar_url, :size => "32x32" %>
+  </a>
+  <div class="media-body">
     <div class="content"><%= comment.user.name %>: <%= comment.content %></div>
     <div class="created_at"><%= time_ago_in_words comment.created_at %></div>
   </div>

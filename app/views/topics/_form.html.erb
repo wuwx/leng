@@ -3,19 +3,8 @@
     <%= form_for Topic.new, :remote => true do |f| %>
       <%= f.text_area :content, :style => "height: 80px; width: 98%;" %>
       <div class="clearfix">
-        <i id="icon-picture" class="icon-picture"></i>
         <%= f.submit :class => "btn btn-primary pull-right", "data-disable-with" => "正在保存" %>
       </div>
     <% end %>
   </div>
 </div>
-
-<script type="text/javascript">
-//$(function() {
-//  $('#icon-picture').popover('show');
-//});
-
-//$('.btn').on("click", function() {
-//  $(this).button('loading');
-//});
-</script>

@@ -1,8 +1,8 @@
-<div class="comment row-fluid">
-  <div class="span1">
-    <%= image_tag current_user.gravatar_url %>
-  </div>
-  <div class="span11">
+<div class="comment media">
+  <a class="pull-left" href="#">
+    <%= image_tag current_user.gravatar_url, :size => "48x48" %>
+  </a>
+  <div class="media-body">
     <%= form_for Comment.new, :url => comments_path(:topic_id => @topic), :remote => true do |f| %>
     <%= f.text_area :content, :style => "height: 50px; width: 98%;" %>
       <div class="clearfix">

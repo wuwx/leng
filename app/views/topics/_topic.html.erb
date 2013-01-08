@@ -1,18 +1,20 @@
 <%= div_for topic, :class => "widget" do %>
   <div class="widget-content">
-    <div class="row-fluid">
-      <div class="span1">
-        <%= image_tag topic.user.gravatar_url %>
-      </div>
-      <div class="span11">
-        <div class="content"><%= simple_format topic.content %></div>
+    <div class="media">
+      <a class="pull-left" href="#">
+        <%= image_tag topic.user.gravatar_url, :size => "48x48" %>
+      </a>
+      <div class="media-body">
+        <div class="content">
+          <%= simple_format topic.content %>
+        </div>
         <div class="created_at clearfix">
           <%= topic.user.name %> <%= time_ago_in_words topic.created_at %>
           <div class="pull-right">
-            <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-info btn-small", "data-disable-with" => "载入中", :remote => true do %>
+            <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-small", "data-disable-with" => "载入中", :remote => true do %>
               评论 <%= topic.comments.size %>
             <% end %>
-            <%= link_to flowers_path(:topic_id => topic), :class => "flowers_count btn btn-info btn-small", :method => :post, :remote => true do %>
+            <%= link_to flowers_path(:topic_id => topic), :class => "flowers_count btn btn-small", :method => :post, :remote => true do %>
               喜欢 <%= topic.flowers.size %>
             <% end %>
           </div>
