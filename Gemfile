@@ -73,3 +73,6 @@ gem "inherited_resources", "~> 1.3.1"
 
 # Rails 4的新特性
 gem "strong_parameters", "~> 0.1.6"
+
+# 将网站基础配置保存到yaml
+gem "settingslogic", "~> 2.0.9"
