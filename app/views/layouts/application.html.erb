@@ -19,10 +19,10 @@
         <%= render_list :class => "nav pull-right" do |li|
           if current_user
             li << link_to(current_user.name, edit_user_path(current_user))
-            li << link_to("退出", session_path, :method => :delete)
+            li << link_to("退出", destroy_user_session_path, :method => :delete)
           else
-            li << link_to("登录", new_session_path)
-            li << link_to("注册", new_user_path)
+            li << link_to("登录", new_user_session_path)
+            li << link_to("注册", new_user_registration_path)
           end
         end %>
       </div>
