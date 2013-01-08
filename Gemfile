@@ -76,3 +76,6 @@ gem "strong_parameters", "~> 0.1.6"
 
 # 将网站基础配置保存到yaml
 gem "settingslogic", "~> 2.0.9"
+
+# 使用 Devise 做认证
+gem "devise", "~> 2.1.2"
