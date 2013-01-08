@@ -1,3 +1,10 @@
+<h3>
+  角色管理
+  <div class="pull-right">
+    <%= link_to "新建角色", [:new, :admin, :role], :class => "btn btn-primary" %>
+  </div>
+</h3>
+
 <table class="table">
   <%= render @roles %>
 </table>

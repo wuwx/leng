@@ -1,6 +1,6 @@
 <%= content_tag_for :tr, permission do %>
   <td><%= permission.name %></td>
-  <td><%= permission.resource %></td>
+  <td><%= permission.model %></td>
   <td><%= permission.action %></td>
   <td width="10%"><%= link_to "授权", [:edit, :admin, permission], :class => "btn btn-small" %></td>
 <% end %>
