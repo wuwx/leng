@@ -1,9 +1,9 @@
 class CreatePermissions < ActiveRecord::Migration
   def change
     create_table :permissions do |t|
-      t.string :subject
+      t.string :name
+      t.string :resource
       t.string :action
-      t.string :description
       t.timestamps
     end
     
