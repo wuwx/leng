@@ -6,3 +6,7 @@
 #  $('.topic').click ->
 #    $(this).unbind('click')
 #    $.get("/comments.js", { topic_id: $(this).attr('id').replace(/topic_/, '') })
+
+$ ->
+  $('#topic_content').focus ->
+    $('#topic_content').height(80)

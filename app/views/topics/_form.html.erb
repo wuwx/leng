@@ -1,7 +1,7 @@
 <div class="widget">
   <div class="widget-content">
     <%= form_for Topic.new, :remote => true do |f| %>
-      <%= f.text_area :content, :style => "height: 80px; width: 98%;" %>
+      <%= f.text_area :content, :placeholder => "来发个冷冷的笑话吧", :style => "height: 20px; width: 98%;" %>
       <div class="clearfix">
         <%= f.submit :class => "btn btn-primary pull-right", "data-disable-with" => "正在保存" %>
       </div>
