@@ -1,11 +1,9 @@
 class User < ActiveRecord::Base
-  
+  include ActiveModel::ForbiddenAttributesProtection
   include Gravtastic
   gravtastic
   has_secure_password
-  
-  attr_accessible :name, :email, :password, :password_confirmation
-  
+    
   has_many :flowers
   has_many :comments
   has_many :topics
