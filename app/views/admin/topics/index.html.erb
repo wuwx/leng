@@ -2,11 +2,9 @@
   <h3><%= @page_title %></h3>
 </div>
 
-<div class="widget-content">
-  <table class="table">
-    <%= render @topics %>
-  </table>
-</div>
+<table class="table">
+  <%= render @topics %>
+</table>
 
 <div class="widget-footer">
   <%= will_paginate @topics %>

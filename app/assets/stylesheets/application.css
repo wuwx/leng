@@ -28,14 +28,14 @@ body {
 }
 .widget .widget-header {
   padding: 10px;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #E5E5E5;;
 }
 .widget .widget-content {
   padding: 10px;
 }
 .widget .widget-footer {
   padding: 10px;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #E5E5E5;;
 }
 .widget h3 {
   margin: 0;
@@ -44,6 +44,9 @@ body {
 .widget form {
   margin-bottom: 0;
 }
+.widget .form-horizontal {
+  margin: 20px 0;
+}
 .widget .table {
   margin: 0;
 }
@@ -51,5 +54,6 @@ body {
   margin: 0;
 }
 .widget .form-actions {
+  border-radius: 0 0 6px 6px;
   margin-bottom: 0;
 }
