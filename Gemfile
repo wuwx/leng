@@ -70,3 +70,6 @@ gem "rails-i18n", "~> 0.7.2"
 
 # 后台管理使用默认的脚手架就好
 gem "inherited_resources", "~> 1.3.1"
+
+# Rails 4的新特性
+gem "strong_parameters", "~> 0.1.6"
