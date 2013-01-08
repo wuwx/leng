@@ -1,5 +1,7 @@
 Leng::Application.routes.draw do
   
+  devise_for :users
+
   root :to => 'topics#index'
   resource :session
   resources :topics
