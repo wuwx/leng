@@ -1,4 +1,5 @@
 <%= content_tag_for :tr, topic do %>
+  <td><%= topic.id %></td>
   <td><%= topic.user.name %></td>
-  <td><%= link_to "删除", [:admin, topic], :method => :delete, :class => "btn btn-dange" %></td>
+  <td><%= link_to "删除", [:admin, topic], :method => :delete, :class => "btn btn-small btn-danger" %></td>
 <% end %>
