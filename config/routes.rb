@@ -15,6 +15,7 @@ Leng::Application.routes.draw do
   resources :users
   resources :comments
   resources :flowers
+  resources :follows
   
   namespace :admin do
     root :to => 'dashboards#show'

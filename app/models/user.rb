@@ -6,9 +6,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   include ActiveModel::ForbiddenAttributesProtection
+  
   include Gravtastic
   gravtastic
-    
+  
+  acts_as_follower
+  acts_as_followable
+  
   has_many :flowers
   has_many :comments
   has_many :topics

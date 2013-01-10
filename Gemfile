@@ -79,3 +79,6 @@ gem "settingslogic", "~> 2.0.9"
 
 # 使用 Devise 做认证
 gem "devise", "~> 2.1.2"
+
+# 使用 acts_as_follower 实现各种关注
+gem "acts_as_follower", "~> 0.1.1"

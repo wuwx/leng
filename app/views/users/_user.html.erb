@@ -1,7 +1,9 @@
 <%= div_for user, :class => "row-fluid" do %>
   <div class="span2"><%= image_tag user.gravatar_url %></div>
   <div class="span10">
-    <div><%= user.name %></div>
+    <div>
+      <%= user.name %>
+      <%= link_to "关注", follows_path(:user_id => user), :class => "btn btn-mini", :method => :post %></div>
     <div><%= user.created_at %></div>
   </div>
 <% end %>
