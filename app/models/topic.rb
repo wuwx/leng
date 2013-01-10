@@ -4,7 +4,7 @@ class Topic < ActiveRecord::Base
   
   has_many :flowers
   has_many :comments
-  belongs_to :user, :counter_cache => true
+  belongs_to :user
   
   validates :user_id, :presence => true
   validates :content, :presence => true

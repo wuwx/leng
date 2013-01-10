@@ -1,8 +1,8 @@
 class Comment < ActiveRecord::Base
   include ActiveModel::ForbiddenAttributesProtection
   attr_accessible :content
-  belongs_to :topic, :counter_cache => true
-  belongs_to :user, :counter_cache => true
+  belongs_to :topic
+  belongs_to :user
   
   validates :topic_id, :presence => true
   validates :user_id, :presence => true

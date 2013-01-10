@@ -35,9 +35,6 @@ class CreateUsers < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
-      t.integer :comments_count, :default => 0
-      t.integer :flowers_count, :default => 0
-      t.integer :topics_count, :default => 0
       t.timestamps
     end
 
