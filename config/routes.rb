@@ -1,5 +1,13 @@
 Leng::Application.routes.draw do
   
+  namespace :api do
+    scope :module => "v1" do
+      resources :users
+      resources :topics
+      resources :comments
+    end
+  end
+  
   devise_for :users, :controllers => {:registrations => "users/registrations", :passwords => "users/passwords"}
 
   root :to => 'topics#index'
