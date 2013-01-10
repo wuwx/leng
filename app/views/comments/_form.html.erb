@@ -1,13 +1,17 @@
-<div class="comment media">
-  <a class="pull-left" href="#">
-    <%= image_tag current_user.gravatar_url, :size => "48x48" %>
-  </a>
-  <div class="media-body">
-    <%= form_for Comment.new, :url => comments_path(:topic_id => @topic), :remote => true do |f| %>
-    <%= f.text_area :content, :style => "height: 50px; width: 97%;" %>
-      <div class="clearfix">
-        <%= f.submit :class => "btn btn-primary btn-small pull-right", "data-disable-with" => "正在保存" %>
-      </div>
-    <% end %>
+<% if can? :create, Comment %>
+  <div class="comment media">
+    <a class="pull-left" href="#">
+      <%= image_tag current_user.gravatar_url, :size => "48x48" %>
+    </a>
+    <div class="media-body">
+      <%= form_for Comment.new, :url => comments_path(:topic_id => @topic), :remote => true do |f| %>
+      <%= f.text_area :content, :style => "height: 50px; width: 97%;" %>
+        <div class="clearfix">
+          <%= f.submit :class => "btn btn-primary btn-small pull-right", "data-disable-with" => "正在保存" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% elsif not user_signed_in? %>
+  需要 <%= link_to("登录", new_user_session_path) %> 后方可回复, 如果你还没有账号你可以 <%= link_to("注册", new_user_registration_path) %> 一个帐号。
+<% end %>

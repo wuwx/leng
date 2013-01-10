@@ -1,10 +1,14 @@
 <div class="widget">
   <div class="widget-body">
-    <%= form_for Topic.new, :remote => true do |f| %>
-      <%= f.text_area :content, :placeholder => "来发个冷冷的笑话吧", :style => "height: 20px; width: 98%;" %>
-      <div class="clearfix">
-        <%= f.submit :class => "btn btn-primary pull-right", "data-disable-with" => "正在保存" %>
-      </div>
+    <% if can? :create, Topic %>
+      <%= form_for Topic.new, :remote => true do |f| %>
+        <%= f.text_area :content, :placeholder => "来发个冷冷的笑话吧", :style => "height: 20px; width: 98%;" %>
+        <div class="clearfix">
+          <%= f.submit :class => "btn btn-primary pull-right", "data-disable-with" => "正在保存" %>
+        </div>
+      <% end %>
+    <% elsif not user_signed_in? %>
+      需要 <%= link_to("登录", new_user_session_path) %> 后方可发布, 如果你还没有账号你可以 <%= link_to("注册", new_user_registration_path) %> 一个帐号。
     <% end %>
   </div>
 </div>

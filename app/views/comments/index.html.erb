@@ -2,6 +2,4 @@
   <%= render @comments %>
 </div>
 
-<% if can? :create, Comment %>
-  <%= render 'form' %>
-<% end %>
+<%= render 'form' %>
