@@ -31,10 +31,10 @@ body {
   border-bottom: 1px solid #E5E5E5;
 }
 .widget .widget-body {
-  padding: 15px;
+  padding: 9px 15px;
 }
 .widget .widget-footer {
-  padding: 15px;
+  padding: 9px 15px;
   border-top: 1px solid #E5E5E5;;
 }
 .widget h3 {
