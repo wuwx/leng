@@ -87,3 +87,6 @@ gem "acts_as_follower", "~> 0.1.1"
 
 # 使用 acts_as_votable 对主题进行评分
 gem "acts_as_votable", "~> 0.4.0"
+
+# 使用 acts_as_commentable 支持评论功能
+gem 'acts_as_commentable', '3.0.1'

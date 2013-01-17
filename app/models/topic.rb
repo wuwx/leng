@@ -4,7 +4,6 @@ class Topic < ActiveRecord::Base
   
   acts_as_votable
   
-  has_many :flowers
   has_many :comments
   belongs_to :user
   

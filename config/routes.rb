@@ -14,7 +14,6 @@ Leng::Application.routes.draw do
   resources :topics
   resources :users
   resources :comments
-  resources :flowers
   resources :follows
   
   namespace :admin do

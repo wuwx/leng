@@ -14,9 +14,6 @@
             <%= link_to comments_path(:topic_id => topic), :class => "comments_count btn btn-small", "data-disable-with" => "载入中", :remote => true do %>
               评论 <%= topic.comments.size %>
             <% end %>
-            <%= link_to flowers_path(:topic_id => topic), :class => "flowers_count btn btn-small", :method => :post, :remote => true do %>
-              喜欢 <%= topic.flowers.size %>
-            <% end %>
           </div>
         </div>
         <div class="comments"></div>
