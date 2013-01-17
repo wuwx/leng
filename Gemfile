@@ -84,3 +84,6 @@ gem "devise", "~> 2.1.2"
 
 # 使用 acts_as_follower 实现各种关注
 gem "acts_as_follower", "~> 0.1.1"
+
+# 使用 acts_as_votable 对主题进行评分
+gem "acts_as_votable", "~> 0.4.0"
