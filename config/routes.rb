@@ -8,6 +8,8 @@ Leng::Application.routes.draw do
     end
   end
   
+  use_doorkeeper
+  
   devise_for :users, :controllers => {:registrations => "users/registrations", :passwords => "users/passwords"}
 
   root :to => 'topics#index'

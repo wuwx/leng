@@ -94,3 +94,6 @@ gem "acts_as_votable", "~> 0.4.0"
 
 # 使用 acts_as_commentable 支持评论功能
 gem 'acts_as_commentable', '3.0.1'
+
+# 使用 Doorkeeper 快速实现 OAuth Provider
+gem "doorkeeper", "~> 0.6.7"
