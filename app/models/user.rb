@@ -13,7 +13,6 @@ class User < ActiveRecord::Base
   acts_as_follower
   acts_as_followable
   
-  has_many :flowers
   has_many :comments
   has_many :topics
   has_and_belongs_to_many :roles
