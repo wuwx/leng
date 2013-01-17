@@ -2,7 +2,9 @@ require 'test_helper'
 
 class TopicsControllerTest < ActionController::TestCase
   setup do
-    @topic = topics(:one)
+    @user = FactoryGirl.create(:user)
+    @topic = FactoryGirl.create(:topic)
+    sign_in @user
   end
 
   test "should get index" do
