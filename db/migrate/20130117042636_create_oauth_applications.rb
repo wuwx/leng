@@ -6,6 +6,7 @@ class CreateOauthApplications < ActiveRecord::Migration
       t.string  :uid,          :null => false
       t.string  :secret,       :null => false
       t.string  :redirect_uri, :null => false
+      t.references :owner,     :polymorphic => true
       t.timestamps
     end
   end
