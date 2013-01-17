@@ -1,1 +1,0 @@
-$("#<%= dom_id @topic %> .flowers_count").html("喜欢 <%= @topic.flowers.count %>")
