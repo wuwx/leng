@@ -14,6 +14,7 @@
         <a class="brand" href="/">冷！</a>
         <%= render_list :class => "nav" do |li|
           li << link_to("笑话", topics_path)
+          li << link_to("应用", oauth_applications_path)
         end %>
         
         <%= render_list :class => "nav pull-right" do |li|
