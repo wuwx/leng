@@ -27,14 +27,14 @@ body {
   background: #FFF;
 }
 .widget .widget-header {
-  padding: 9px 15px;
+  padding: 10px;
   border-bottom: 1px solid #E5E5E5;
 }
 .widget .widget-body {
-  padding: 9px 15px;
+  padding: 10px;
 }
 .widget .widget-footer {
-  padding: 9px 15px;
+  padding: 10px;
   border-top: 1px solid #E5E5E5;;
 }
 .widget h3 {
