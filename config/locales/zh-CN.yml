@@ -9,6 +9,7 @@ zh-CN:
       comment: 评论
       topic: 笑话
       user: 用户
+      role: 角色
     attributes:
       user:
         name: 用户名
