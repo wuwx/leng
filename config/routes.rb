@@ -14,9 +14,10 @@ Leng::Application.routes.draw do
 
   root :to => 'topics#index'
   resources :topics
-  resources :users
+  resources :users do
+    resource :follow
+  end
   resources :comments
-  resources :follows
   
   namespace :admin do
     root :to => 'dashboards#show'
