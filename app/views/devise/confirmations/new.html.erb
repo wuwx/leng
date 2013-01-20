@@ -1,15 +1,23 @@
-<h2>Resend confirmation instructions</h2>
-
-<%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, :required => true %>
+<div class="row">
+  <div class="span8">
+    <div class="widget">
+      <div class="widget-header">
+        <h3>重发确认信</h3>
+      </div>
+      <%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post, :class => "form-horizontal" }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, :required => true %>
+        <div class="form-actions">
+          <%= f.button :submit, "重发确认信" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
+  <div class="span4">
+    <div class="widget">
+      <div class="widget-body">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

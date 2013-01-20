@@ -2,8 +2,9 @@ require 'test_helper'
 
 class TopicsControllerTest < ActionController::TestCase
   setup do
-    @user = FactoryGirl.create(:user)
     @topic = FactoryGirl.create(:topic)
+    @user = FactoryGirl.create(:user)
+    @user.confirm!
     sign_in @user
   end
 

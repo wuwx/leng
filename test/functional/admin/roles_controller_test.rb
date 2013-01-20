@@ -4,6 +4,7 @@ class Admin::RolesControllerTest < ActionController::TestCase
   setup do
     @role = roles(:one)
     @user = FactoryGirl.create(:user)
+    @user.confirm!
     sign_in @user
   end
 

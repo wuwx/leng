@@ -4,6 +4,7 @@ class Admin::CommentsControllerTest < ActionController::TestCase
   setup do
     @comment = FactoryGirl.create(:comment)
     @user = FactoryGirl.create(:user)
+    @user.confirm!
     sign_in @user
   end
 

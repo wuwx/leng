@@ -4,6 +4,7 @@ class Admin::PermissionsControllerTest < ActionController::TestCase
   setup do
     @permission = permissions(:one)
     @user = FactoryGirl.create(:user)
+    @user.confirm!
     sign_in @user
   end
 

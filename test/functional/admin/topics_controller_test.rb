@@ -3,6 +3,7 @@ require 'test_helper'
 class Admin::TopicsControllerTest < ActionController::TestCase
   setup do
     @user = FactoryGirl.create(:user)
+    @user.confirm!
     @topic = FactoryGirl.create(:topic)
     sign_in @user
   end
