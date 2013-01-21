@@ -1,29 +1,36 @@
-<div class="widget">
-  <div class="widget-header">
-    <h3>Your applications</h3>
+<div class="row">
+  <div class="span9">
+    <div class="widget">
+      <div class="widget-header">
+        <h3>Your applications</h3>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Callback url</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @applications.each do |application| %>
+            <tr id="application_<%= application.id %>">
+              <td><%= link_to application.name, [:oauth, application] %></td>
+              <td><%= application.redirect_uri %></td>
+              <td><%= link_to 'Edit', edit_oauth_application_path(application) %></td>
+              <td><%= link_to 'Destroy', [:oauth, application], :data => { :confirm => 'Are you sure?' }, :method => :delete %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
-
-  <p><%= link_to 'New Application', new_oauth_application_path %></p>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Callback url</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @applications.each do |application| %>
-        <tr id="application_<%= application.id %>">
-          <td><%= link_to application.name, [:oauth, application] %></td>
-          <td><%= application.redirect_uri %></td>
-          <td><%= link_to 'Edit', edit_oauth_application_path(application) %></td>
-          <td><%= link_to 'Destroy', [:oauth, application], :data => { :confirm => 'Are you sure?' }, :method => :delete %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
+  <div class="span3">
+    <div class="widget">
+      <div class="widget-body">
+        <%= link_to 'New Application', new_oauth_application_path, :class => "btn btn-large btn-block" %>
+      </div>
+    </div>
+  </div>
 </div>
