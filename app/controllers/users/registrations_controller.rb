@@ -1,6 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  def resource_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  end
-  private :resource_params
+  
+  private
+    def resource_params
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password)
+    end
 end
