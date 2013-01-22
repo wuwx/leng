@@ -9,7 +9,7 @@ class Admin::PermissionsController < Admin::ApplicationController
   
   protected
     def resource_params
-      [params.require(:permission).permit(:name, :resource, :action, :role_ids)] unless request.get?
+      [params.require(:permission).permit(:name, :model, :action, :role_ids)] unless request.get?
     end
     
     def resource_url

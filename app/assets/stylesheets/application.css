@@ -50,6 +50,10 @@ body {
 .widget .table {
   margin: 0;
 }
+.widget .table th, .widget .table td {
+  border-top: none;
+  border-bottom: 1px solid #dddddd;
+}
 .widget .pagination {
   margin: 0;
 }
