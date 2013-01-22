@@ -3,7 +3,7 @@
     <%= image_tag comment.user.gravatar_url, :size => "32x32" %>
   </a>
   <div class="media-body">
-    <div class="content"><%= comment.user.name %>: <%= comment.content %></div>
+    <div class="content"><%= comment.user.name %>: <%= comment.comment %></div>
     <div class="created_at"><%= time_ago_in_words comment.created_at %></div>
   </div>
 <% end %>
